@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f6">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <yfkj.zm.farm.view.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_bg">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="报警设置"
+            android:textColor="@color/black3" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_btnblue"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp"
+            android:text="保存"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/ll00"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_below="@+id/save"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="采集间隔(分钟)"
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/et_time"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberSigned"
+                android:maxLength="2"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/t5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll00"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="传感器报警 :"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll00"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/t5"
+            android:text="根据传感器数据,来告警相应环境参数"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/wd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t5"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="空温"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/t5"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/wd"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="上限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/wd_up"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="℃"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/t5"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/wd_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="℃"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll1"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="空湿"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll1"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/sd"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="上限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/sd_up"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="%RH"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/sd_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="%RH"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll3"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="土温"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll3"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/tw"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="上限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/twd_up"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="℃"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll6"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/twd_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="℃"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll5"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="土湿"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll7"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll5"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/wd"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="上限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/tsd_up"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="%RH"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll8"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll5"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/tsd_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="%RH"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll7"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="光照"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll9"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll7"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/wd"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="上限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/gz_up"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="Lux"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll10"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll7"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/gz_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="Lux"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/qy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll9"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="气压"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll11"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll9"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/wd"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="上限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/qy_up"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="Hpa"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll12"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll9"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/qy_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="Hpa"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/yl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll11"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="雨量"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll13"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll11"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/wd"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="上限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/yl_up"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="mm/min"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll14"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll11"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/yl_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="mm/min"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll13"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="风速"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll15"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll13"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/wd"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="上限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/fs_up"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="m/s"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll16"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll13"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.43"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/fs_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="m/s"
+                android:textColor="@color/black3" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll16"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="电量"
+            android:textColor="@color/black3" />
+
+        <LinearLayout
+            android:id="@+id/ll17"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/ll16"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/wd"
+            android:background="@drawable/bg_btn_bl"
+            android:orientation="horizontal"
+            app:width_percent="0.9"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_lift"
+                android:gravity="center"
+                android:text="下限 : "
+                android:textColor="@color/black3" />
+
+            <EditText
+                android:id="@+id/dl_down"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pop"
+                android:inputType="numberDecimal"
+                android:maxLength="2"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/size15" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_right"
+                android:gravity="center"
+                android:text="%"
+                android:textColor="@color/black3" />
+        </LinearLayout>
+    </yfkj.zm.farm.view.PercentRelativeLayout>
+</LinearLayout>
+</ScrollView>

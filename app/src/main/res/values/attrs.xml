@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--百分比布局-->
+    <declare-styleable name="Percent">
+        <attr name="width_percent" format="float" />
+        <attr name="height_percent" format="float" />
+    </declare-styleable>
+    <!--水平进度条-->
+    <declare-styleable name="HorizontalProgressbar">
+        <attr name="progress_unreach_color" format="color" />
+        <attr name="progress_unreach_heigth" format="dimension" />
+        <attr name="progress_reach_color" format="color" />
+        <attr name="progress_reach_heigth" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_offset" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="RoundProgressbar">
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+</resources>

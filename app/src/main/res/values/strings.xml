@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">气象站</string>
+    <string name="digit">._/$:-?0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+</resources>
